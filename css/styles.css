@@ -1,0 +1,211 @@
+/* Définition de constantes */
+:root {
+  --padding: 8px;
+  --padding: 6px;
+  --border-radius: 10px;
+  --scroolbar-with: 10px;
+}
+
+/* Remettre à zéro les marges de tous éléments pour contrecarrer les valeurs par défaut prédéfinies du fureteur */
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+/* Classe pour la mise en page utilisant les "flexbox" */
+.page {
+  /* disposition verticale des sections header, main et footer */
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  gap: var(--padding);
+  padding: var(--padding);
+
+  .favicon {
+    height: 40px;
+    width: 40px;
+  }
+
+  .header,
+  .footer {
+    font-size: 1.5em;
+    font-weight: bolder;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+
+    .menu {
+      /* disposition horizontale des items de menu */
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: left;
+    }
+
+    .menuItem {
+      flex-grow: 1;
+      /* taille adaptative */
+      font-size: 20px;
+      font-weight: bold;
+      text-decoration: none;
+      color: rgb(255, 255, 255);
+      border: none;
+    }
+    .menuItem:hover {
+      color: dodgerblue;
+      transition: 0.8s;
+    }
+
+    .selectedMenuItem {
+      border: solid 1px;
+      padding: 3px;
+    }
+  }
+
+  .main {
+    /* permettre de le formatage flex du parent */
+    flex: 1;
+    /* hauteur minimum relative à la hauteur du viewport*/
+    min-height: 10vh;
+    /* contrecarrer les styles de la classe page */
+    border: none;
+    padding: 0px;
+    background: white;
+
+    /* Alignement horizontal des éléments enfants */
+    display: flex;
+    flex-direction: row;
+    gap: var(--padding);
+
+    .scrollSection {
+      overflow-y: auto;
+    }
+
+    .content {
+      flex-grow: 1;
+
+      .bigImage {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        aspect-ratio: 16/9;
+      }
+    }
+
+    .justifiedText {
+      text-align: justify;
+    }
+
+    .left_Aside {
+      flex: 1;
+      min-width: 100px;
+      max-width: 200px;
+    }
+
+    .right_Aside {
+      flex: 1;
+      min-width: 60px;
+      max-width: 120px;
+    }
+  }
+
+  .main > * {
+    background: white;
+    padding: var(--padding);
+    border: 1px solid gray;
+  }
+}
+
+.page > * {
+  /* cibler tout les enfants enfant de l'éléments de classe page */
+  background: rgb(212, 53, 53);
+  padding: 1rem;
+  border: 1px solid gray;
+}
+
+/* disposer une liste d'icone font-awsome vertivalement */
+.iconList {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 8px;
+}
+
+/* style pour formater les icones de classe font-awsome */
+.fa-icon {
+  flex: 1;
+  font-size: 30px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  position: 1px;
+}
+
+/* Changer la couleur de l'élément survolé de classe fa-icon */
+.fa-icon:hover {
+  color: dodgerblue;
+  transition: 0.5s;
+}
+
+/*** classes pour l'apparence de la barre de défilement ***/
+::-webkit-scrollbar {
+  border-radius: var(--border-radius);
+  width: var(--scroolbar-with);
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: var(--border-radius);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: var(--border-radius);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+.momo-trust-display-regular {
+  font-family: "Momo Trust Display", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.8em;
+}
+
+.author {
+  width: 30%;
+  min-width: 300px;
+  margin: auto;
+  margin-top: 50px;
+  font-size: 1.5em;
+
+  ul {
+    list-style-type: none;
+  }
+}
+
+.joursSemaine{
+    grid-template-columns: auto auto auto auto auto auto auto;
+    padding: 10px;
+    display: grid;
+    font-size: 10px;
+}
+
+.containerMois{
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.mois{
+    border: solid;
+    width: 250px;
+    height: 250px;
+    margin: 5px;
+}
+.textMois {
+    font-size: 20px;
+    margin-left: 90px;
+}
+
+.jours {
+    font-size: 20px;
+    padding: 5px;
+}
