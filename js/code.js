@@ -30,7 +30,9 @@ function ChangerLangue(){
 function envoyerDonne(){
 console.log(usernameVal.value);
 console.log(passwordVal.value);
-    if(usernameVal.value == userA && passwordVal.value == passA){
+    if(usernameVal.value == userA && passwordVal.value == passA
+        || usernameVal.value == userE && passwordVal.value == passE
+    ){
 
         window.location.replace("accueil.html");
     }
@@ -48,6 +50,9 @@ console.log(passwordVal.value);
 
 let userA = "Antho304";
 let passA = "Nelly1013$";
+
+let userE = "Eric";
+let passE = "Salvail57";
 
 
 let currentLangue = 1;
