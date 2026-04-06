@@ -182,30 +182,82 @@
   }
 }
 
-.joursSemaine{
-    grid-template-columns: auto auto auto auto auto auto auto;
-    padding: 10px;
-    display: grid;
-    font-size: 10px;
+.joursSemaine {
+  grid-template-columns: auto auto auto auto auto auto auto;
+  padding: 10px;
+  display: grid;
+  font-size: 10px;
 }
 
-.containerMois{
-    flex-wrap: wrap;
-    display: flex;
+.containerMois {
+  flex-wrap: wrap;
+  display: flex;
 }
 
-.mois{
-    border: solid;
-    width: 250px;
-    height: 250px;
-    margin: 5px;
+.mois {
+  border: solid;
+  width: 250px;
+  height: 250px;
+  margin: 5px;
 }
 .textMois {
-    font-size: 20px;
-    margin-left: 90px;
+  font-size: 20px;
+  margin-left: 90px;
 }
 
 .jours {
-    font-size: 20px;
-    padding: 5px;
+  font-size: 20px;
+  padding: 5px;
 }
+
+.boiteLogin {
+  width: 500px;
+  height: 250px;
+  border: solid rgb(158, 168, 166);
+  border-radius: 10px;
+  margin: auto;
+  margin-top: 50px;
+
+  input {
+    border: solid 2px rgb(121, 121, 121);
+    border-radius: 100px;
+  }
+}
+
+.titleLogin {
+  font-family: "Times New Roman";
+  font-size: 25px;
+  margin: auto;
+}
+
+.buttonForm {
+  font-weight: bold;
+  margin-left: 90px;
+  margin-top: 70px;
+  width: 100px;
+}
+.buttonForm:hover {
+  background-color: rgb(199, 199, 255);
+  transition: 0.3s;
+}
+
+.buttonLangue{
+  width: 80px;
+  margin-left: 100px;
+
+  
+}
+.buttonLangue:hover{
+    background-color: rgb(199, 199, 255);
+    transition: 0.3s;
+  }
+
+
+  .erreurText{
+
+    font-size: 20px;
+    color: red;
+    font-weight: bold;
+    text-align: center;
+
+  }
